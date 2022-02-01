@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # ¿NvEnkr? Còdig Fitxer
+if [ $1 == "--help" ]; then
+    echo -e "---Encriptador de fitxers---\n Ús: $0 Còdig Fitxer"
 if [[ $2 == *./* ]]; then
     pwd=`pwd`
     doc=`echo $2 | sed "s/.//"`
