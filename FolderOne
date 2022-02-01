@@ -43,4 +43,7 @@ else
     fi
     createfol "$1" "$2" "$3"
 fi
+if [ $1 == "-p" -o $1 == "--preset" ]; then
+    echo "Ceating Preset"
+fi
 echo "Fitxers creats correctament!"
