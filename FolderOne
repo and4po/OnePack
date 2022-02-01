@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Prefix Nombre Ruta
+
+error() {
+    echo $1
+    exit 1
+}
+
+createfol() {
+    num_baix=`echo $2 | cut -d "-" -f 1`
+    num_alt=`echo $2 | cut -d "-" -f 2`
+
+    for (( i = $num_baix; i <= $num_alt; i++ )); do
+        name="$3/$1$i"
+        if [ $i -lt 10 ]; then
+          name="$3/$10$i"
+        fi
+        mkdir $name
+    done
+}
+
+if [ $# -eq 0 ]; then
+        echo -n "Ruta: "
+        read Ruta
+        echo -n "Prefixe: "
+        read Pref
+        echo -n "Rang(Principi-Final): "
+        read Rang
+        createfol "$Pref" "$Rang" "$Ruta"
+else
+    if [ $1 == "--help" ]; then
+        echo -e "---Creador de fitxers--- \n Ús: FolderOne Prefix Rang Ruta"
+        exit 1
+    else
+        if [ ! -d $3 ]; then
+           error "Error: el directori no existeix"
+        fi
+
+        if [ $2 -lt 1 ]; then
+            error "Error: el nombre de fichers no pot ser mes petit que 1"
+        fi
+    fi
+    createfol "$1" "$2" "$3"
+fi
+echo "Fitxers creats correctament!"

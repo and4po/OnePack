@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# ¿NvEnkr? Còdig Fitxer
+if [[ $2 == *./* ]]; then
+    pwd=`pwd`
+    doc=`echo $2 | sed "s/.//"`
+    doc="$pwd$doc"
+else
+    doc=$2
+fi
+echo $# >> TempFile.tmp
+echo $1 >> TempFile.tmp
+echo $doc >> TempFile.tmp
+python3 ~/Encriptar.py
+rm TempFile.tmp
