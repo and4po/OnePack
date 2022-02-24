@@ -39,7 +39,8 @@ if [ $# -eq 0 ]; then
         read Ruta
         echo -n "Prefixe: "
         read Pref
-        if [ Pref == "doc" -o Pref == "document" ]; then
+        echo $Pref
+        if [[ Pref == "doc "]]; then
             echo -n "Document: "
             read Doc
             foldoc "$Ruta" "$Doc"
