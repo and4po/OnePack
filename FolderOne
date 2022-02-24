@@ -19,6 +19,16 @@ createfol() {
         mkdir $name
     done
 }
+foldoc() {
+    # for (( i = 1; i <= `cat $2 | wc -l`; i++ )); do
+    #     echo hello$i
+    # done
+    while IFS= read -r line
+    do
+        line=`echo $line | sed "s/-//"`
+        mkdir $line
+    done < $2
+}
 
 if [ $# -eq 0 ]; then
         echo -n "Ruta: "
@@ -28,6 +38,8 @@ if [ $# -eq 0 ]; then
         echo -n "Rang(Principi-Final): "
         read Rang
         createfol "$Pref" "$Rang" "$Ruta"
+elif [ -f "$2" ]; then
+    foldoc "$1" "$2"
 else
     if [ $1 == "--help" ]; then
         echo -e "---Creador de fitxers--- \n Ús: FolderOne Prefix Rang Ruta"
@@ -37,9 +49,9 @@ else
            error "Error: el directori no existeix"
         fi
 
-        if [ $2 -lt 1 ]; then
-            error "Error: el nombre de fichers no pot ser mes petit que 1"
-        fi
+        #if [ $2 -lt 1 ]; then
+        #    error "Error: el nombre de fichers no pot ser mes petit que 1"
+        #fi
     fi
     createfol "$1" "$2" "$3"
 fi
