@@ -1,6 +1,6 @@
 # One Pack
 <p align="center">
-  <img width="280" height="280" src="https://i.postimg.cc/PJ88Vp4B/Icona.png">
+  <img width="280" height="280" src="https://i.postimg.cc/PJ88Vp4B/Icona.png>
 </p>
 
 
