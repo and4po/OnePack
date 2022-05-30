@@ -12,3 +12,5 @@ Is a simple program package for Mac and Linux.
 
 ## Español
 Es un paquete de programas muy sencillo para Mac i Linux.
+
+<a href="https://www.flaticon.com/free-icons/box" title="box icons">Box icons created by Freepik - Flaticon</a>
