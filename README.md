@@ -1,3 +1,3 @@
 # One Pack
 
-Es una paquete de programas para usar en Linux i Mac.
+És un paquet de programes molt senzill per a utilitzar a Mac i Linux.
