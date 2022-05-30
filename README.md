@@ -4,11 +4,11 @@
 </p>
 
 
-##English
+## English
 Is a simple program package for Mac and Linux.
 
-##Català
+## Català
 És un paquet de programes molt senzill per a utilitzar a Mac i Linux.
 
-##Español
+## Español
 Es un paquete de programas muy sencillo para Mac i Linux.
